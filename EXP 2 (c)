@@ -1,0 +1,17 @@
+clc;
+rho0 = 1e-6;
+epsilon = 8.854e-12;
+R = 1;
+r = linspace(0, R, 100);
+D = (rho0 .* r.^2) / 4;
+E = D / epsilon;
+subplot(1,2,1);
+plot(r,D,'LineWidth',2);
+xlabel("Radius (m)");
+ylabel("Electric Flux Density (D)");
+title("Linear Density: D vs Radius");
+subplot(1,2,2);
+plot(r,E,'LineWidth',2);
+xlabel("Radius (m)");
+ylabel("Electric Field (E)");
+title("Linear Density: E vs Radius");
