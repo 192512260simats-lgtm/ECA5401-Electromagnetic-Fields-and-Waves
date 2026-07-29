@@ -1,0 +1,45 @@
+clc;
+clear;
+
+% Input values
+q = input('Enter the value of charge q (C) = ');
+r = input('Enter the value of distance r (m) = ');
+
+% Constant
+epsilon = 8.854e-12;          % Permittivity of free space (F/m)
+k = 1/(4*pi*epsilon);         % Coulomb's constant
+
+% Electric Field
+E = k*q/(r^2);
+disp('The Electric Field (E) is:');
+disp(E);
+
+% Electric Flux Density
+D = epsilon*E;
+disp('The Electric Flux Density (D) is:');
+disp(D);
+
+% Plotting
+x = linspace(0.1,10,100);     % Distance from 0.1 m to 10 m
+
+E_plot = k*q./(x.^2);
+D_plot = epsilon*E_plot;
+
+figure;
+
+% Electric Field Plot
+subplot(1,2,1);
+plot(x,E_plot,'b','LineWidth',2);
+grid on;
+xlabel('Distance r (m)');
+ylabel('Electric Field E (N/C)');
+title('Electric Field vs Distance');
+
+% Electric Flux Density Plot
+subplot(1,2,2);
+plot(x,D_plot,'r','LineWidth',2);
+grid on;
+xlabel('Distance r (m)');
+ylabel('Flux Density D (C/m^2)');
+title('Flux Density vs Distance');
+
