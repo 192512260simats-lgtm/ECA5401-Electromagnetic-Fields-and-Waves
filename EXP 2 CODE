@@ -1,0 +1,25 @@
+clc;
+clear;
+q=input('Enter the value of q=');
+r=input('Enter the value of r=');
+epsilon=8.854e-12;
+k=1/(4*pi*epsilon);
+E=k*q/(r^2);
+disp("The electric field is");
+disp(E);
+D=epsilon*E;
+disp("The flux density is");
+disp(D);
+% Plot
+x=linspace(0.1,10,50);
+E_plot=k*q./(x.^2);
+D_plot=epsilon*E_plot;
+figure;
+subplot(1,2,1);
+plot(x,E_plot);
+xlabel('Radius');
+ylabel('Electric field');
+subplot(1,2,2);
+plot(x,D_plot);
+xlabel('Radius');
+ylabel('Flux density')
