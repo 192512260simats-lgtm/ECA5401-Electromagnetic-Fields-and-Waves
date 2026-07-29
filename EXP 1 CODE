@@ -1,0 +1,22 @@
+clc;
+clear;
+
+% Input values
+x = input('Enter the value of X = ');
+y = input('Enter the value of Y = ');
+z = input('Enter the value of Z = ');
+
+% Cartesian to Cylindrical
+r = sqrt(x^2 + y^2);
+phi = atan2d(y, x);
+
+disp('Cartesian to Cylindrical Coordinate System P(r, phi, z) = ');
+disp([r phi z]);
+
+% Cartesian to Spherical
+R = sqrt(x^2 + y^2 + z^2);
+theta = acosd(z / R);
+phi = atan2d(y, x);
+
+disp('Cartesian to Spherical Coordinate System S(R, theta, phi) = ');
+disp([R theta phi]);
