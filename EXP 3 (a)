@@ -1,0 +1,14 @@
+clc;
+clear;
+q1 = input('Enter the charge q1=');
+q2 = input('Enter the charge q2=');
+epsilon = 8.854e-12;
+k = 1/(4*pi*epsilon);
+r = linspace(0.1,10,100);
+F = k*q1*q2./(r.^2);
+disp('Force at r = 1 m is:');
+disp(k*q1*q2/(1^2));
+plot(r,F,'LineWidth',2);
+xlabel('Distance (m)');
+ylabel('Force (N)');
+title('Force between two electric charges');
