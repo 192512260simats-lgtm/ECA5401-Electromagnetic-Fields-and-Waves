@@ -1,0 +1,11 @@
+clc;
+q1 = 5e-6;
+q2 = 2e-6;
+epsilon = 8.854e-12;
+k = 1/(4*pi*epsilon);
+r = linspace(0.5,5,100);
+F = k*q1*q2./(r.^2);
+plot(r,F,'LineWidth',2);
+xlabel('Distance (m)');
+ylabel('Force (N)');
+title('Force between two charges (different magnitudes)');
