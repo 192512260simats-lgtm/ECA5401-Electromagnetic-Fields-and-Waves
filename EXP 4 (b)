@@ -1,0 +1,13 @@
+clc;
+L = 10;
+Q = 50e-6;
+lambda = Q/L;
+disp("Line charge density:");
+disp(lambda);
+r = linspace(0.1,5,100);
+k = 9e9;
+E = k*lambda./r;
+plot(r,E,'LineWidth',2);
+xlabel('Distance (m)');
+ylabel('Electric Field (N/C)');
+title('Electric Field due to Line Charge');
